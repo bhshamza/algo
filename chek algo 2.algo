@@ -1,0 +1,29 @@
+algorithme prob 2.1
+var
+
+    set1 array_of integer [5]:=[6, 10, 5, 1, 3, 9];
+set2 array_of integer[5]:=[7, 11, 5, 3, 9, 2];
+tab array_of integer[];
+found: Boolean;
+sum_distinct: integer:= 0;
+sum_commun: integer:= 0;
+
+begin
+tab:= concat(set1, set2)
+found:= false;
+for i from 0 to tab.length do
+    for j from 0 to tab.length do
+    if (tab[i] = tab[j] and i <> j) then
+found:= true;
+sum_commun = sum_commun + tab[i]
+break;
+end_if
+end_of
+if (found = false) then
+sum_distinct = sum_distinct + tab[i]
+end_if
+end_for
+
+
+
+
